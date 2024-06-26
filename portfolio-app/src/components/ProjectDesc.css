@@ -1,0 +1,60 @@
+.Project-Description {
+  text-align: start;
+  align-items: baseline;
+}
+
+.project-overview {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.project-overview h3, .project-overview h2 {
+  font-size: 1.125rem;
+}
+
+.project-technologies {
+  font-size: 1rem;
+}
+.project-technologies h3, .project-technologies h2 {
+  font-size: 1.125rem;
+}
+
+.project-features {
+  font-size: 1rem;
+}
+.project-features h3, .project-features h2 {
+  font-size: 1.125rem;
+}
+
+.project-contributions {
+  font-size: 1rem;
+}
+.project-contributions h3, .project-contributions h2 {
+  font-size: 1.125rem;
+}
+
+.project-conclusion {
+  font-size: 1rem;
+}
+.project-conclusion h3, .project-conclusion h2 {
+  font-size: 1.125rem;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+a {
+  color: #1e90ff;
+}
+
+a:hover {
+  text-decoration: underline;
+}

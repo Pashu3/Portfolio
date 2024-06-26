@@ -1,0 +1,68 @@
+.accomplishments {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 400px; 
+  border: 2px solid rgb(200, 200, 200);
+  padding: 10px;
+  margin-right: 125px;
+}
+
+.accomplishments .horizontal-navbar {
+  display: flex;
+  justify-content: flex-start; 
+  margin-bottom: 10px;
+  background-color: #040b14;
+  color: white; 
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.accomplishments .navbar-item {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.accomplishments .icon {
+  margin-right: 8px;
+}
+
+.accomplishments .sub-content {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: normal;
+}
+
+.accomplishments .toggle-item {
+  margin-bottom: 10px;
+}
+
+.accomplishments ul {
+  list-style-type: disc;
+  margin-left: 40px;
+  margin-right: 120px;
+  text-align: start;
+}
+
+.accomplishments .view-button {
+  position: relative;
+  margin-left: 950px;
+  bottom: 35px;
+  font-weight: bold;
+  color: black;
+  right: 150px;
+  padding: 4px 8px;
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.accomplishments .view-button:hover {
+  color: rgb(159, 34, 47);
+}

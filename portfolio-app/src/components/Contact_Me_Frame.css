@@ -1,0 +1,107 @@
+.contact-me-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 999; 
+}
+
+.frame-overlay {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(50, 50, 50);
+  border-bottom: 1px solid #ccc;
+  border-radius: 8px 8px 0 0;
+}
+
+.frame-title {
+  font-size: 18px;
+  color: white;
+}
+
+.frame-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.frame-button {
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.frame-content {
+  padding: 10px;
+  overflow: auto; 
+}
+
+.sub-heading {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"],
+.cancel-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  background-color: rgb(50, 50, 50);
+  color: white;
+}
+
+.cancel-button {
+  background-color: rgb(159, 34, 47);
+  color: white;
+  margin-left: 30px;
+}
+
+.minimized .frame-content {
+  display: none;
+}
+
+.maximized {
+  width: 90%;
+  height: 90%;
+  bottom: 5%;
+  right: 5%;
+}
+
+.minimized {
+  height: 50px; 
+}

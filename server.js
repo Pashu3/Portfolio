@@ -11,20 +11,19 @@ dotenv.config();
 const app = express();
 const port = 3001;
 
-// Middleware
+
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'http://localhost:3000', // Replace with your React app URL
+  origin: 'http://localhost:3000', 
 }));
 app.use(morgan('dev'));
 
-// MySQL Connection
 const db = mysql.createConnection({
   host: 'localhost',
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
-  port: 3306, // MySQL server port
+  port: 3306, 
 });
 
 db.connect((err) => {
@@ -35,7 +34,6 @@ db.connect((err) => {
   console.log('Connected to the database.');
 });
 
-// Nodemailer Transporter
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -44,7 +42,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Endpoint to handle Contact Me form submissions
 app.post('/api/contactme', (req, res) => {
   const { name, email, message } = req.body;
 
@@ -59,7 +56,7 @@ app.post('/api/contactme', (req, res) => {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: 'malipashuyahoo123@gmail.com', // Send email to your designated email address
+      to: 'malipashuyahoo123@gmail.com', 
       subject: 'New Contact Me Submission',
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
@@ -75,7 +72,7 @@ app.post('/api/contactme', (req, res) => {
   });
 });
 
-// Endpoint to handle Feedback form submissions
+
 app.post('/api/feedback', (req, res) => {
   const { name, email, message } = req.body;
 
@@ -90,7 +87,7 @@ app.post('/api/feedback', (req, res) => {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: 'malipashuyahoo123@gmail.com', // Send email to your designated email address
+      to: 'malipashuyahoo123@gmail.com', 
       subject: 'New Feedback Submission',
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
@@ -106,13 +103,13 @@ app.post('/api/feedback', (req, res) => {
   });
 });
 
-// Error Handling Middleware
+
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Something broke!');
 });
 
-// Start server
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });

@@ -30,22 +30,22 @@ The Header contains navigation links to the different sections of my portfolio, 
 ### Experience
 In the Experience section, I detail my professional journey, including the roles I've held, the responsibilities I've managed, and the achievements I've garnered along the way.
 
-[Link to Experience Component](./portfolio-app/src/components/About/Experience.js)
+[Link to Experience Component](./portfolio-app/src/components/Experience.js)
 
 ### Education
 The Education section outlines my academic background, including the institutions I've attended, the degrees I've earned, and any relevant coursework or honors.
 
-[Link to Education Component](./portfolio-app/src/components/About/Education.js)
+[Link to Education Component](./portfolio-app/src/components/Education.js)
 
 ### Skills
 Here, I list my technical and soft skills, providing a comprehensive view of my capabilities and areas of expertise.
 
-[Link to Skills Component](./portfolio-app/src/components/About/Skills.js)
+[Link to Skills Component](./portfolio-app/src/components/Skills.js)
 
 ### Accomplishments
 In the Accomplishments section, I highlight significant milestones and recognitions I've received throughout my career and education.
 
-[Link to Accomplishments Component](./portfolio-app/src/components/About/Accomplishments.js)
+[Link to Accomplishments Component](./portfolio-app/src/components/Accomplishments.js)
 
 ## Projects
 The Projects section showcases a variety of projects I've worked on, complete with descriptions and links to more detailed information. Click on each project to learn more about its goals, my contributions, and the outcomes.

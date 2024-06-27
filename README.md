@@ -64,7 +64,7 @@ In addition to tech events, I've also organized and participated in non-tech eve
 ## Contact Me
 The Contact Me section provides a form and my contact details, making it easy for visitors to get in touch with me for any inquiries or opportunities.
 
-[Link to Contact Me Component](./portfolio-app/src/components/ContactMe.js)
+[Link to Contact Me Component](./portfolio-app/src/components/Contact_Me_Frame.js)
 
 ## Feedback
 I value feedback and suggestions. The Feedback section includes a form where visitors can leave their comments and suggestions to help me improve my portfolio.

@@ -19,38 +19,38 @@ Welcome to my portfolio! This project showcases my personal and professional jou
 ## Home
 The Home section provides an overview of my portfolio, giving visitors a snapshot of who I am and what I do.
 
-[Link to Home Component](./portfolio-app/src/components/Home.js)
+[ Home ](./portfolio-app/src/components/Home.js)
 
 ## Header
 The Header contains navigation links to the different sections of my portfolio, ensuring easy access and a smooth user experience.
 
-[Link to Header Component](./portfolio-app/src/components/Header.js)
+[ Header ](./portfolio-app/src/components/Header.js)
 
 ## About
 ### Experience
 In the Experience section, I detail my professional journey, including the roles I've held, the responsibilities I've managed, and the achievements I've garnered along the way.
 
-[Link to Experience Component](./portfolio-app/src/components/Experience.js)
+[ Experience ](./portfolio-app/src/components/Experience.js)
 
 ### Education
 The Education section outlines my academic background, including the institutions I've attended, the degrees I've earned, and any relevant coursework or honors.
 
-[Link to Education Component](./portfolio-app/src/components/Education.js)
+[ Education ](./portfolio-app/src/components/Education.js)
 
 ### Skills
 Here, I list my technical and soft skills, providing a comprehensive view of my capabilities and areas of expertise.
 
-[Link to Skills Component](./portfolio-app/src/components/Skills.js)
+[ Skills ](./portfolio-app/src/components/Skills.js)
 
 ### Accomplishments
 In the Accomplishments section, I highlight significant milestones and recognitions I've received throughout my career and education.
 
-[Link to Accomplishments Component](./portfolio-app/src/components/Accomplishments.js)
+[Accomplishments](./portfolio-app/src/components/Accomplishments.js)
 
 ## Projects
 The Projects section showcases a variety of projects I've worked on, complete with descriptions and links to more detailed information. Click on each project to learn more about its goals, my contributions, and the outcomes.
 
-[Link to Projects Component](./portfolio-app/src/components/Projects.js)
+[ Projects ](./portfolio-app/src/components/Projects.js)
 
 ## Events
 ### Tech Events
@@ -59,17 +59,17 @@ I have conducted and participated in various tech events. This section details t
 ### Non-Tech Events
 In addition to tech events, I've also organized and participated in non-tech events. This section provides insights into those activities.
 
-[Link to Events Component](./portfolio-app/src/components/Events.js)
+[ Events ](./portfolio-app/src/components/Events.js)
 
 ## Contact Me
 The Contact Me section provides a form and my contact details, making it easy for visitors to get in touch with me for any inquiries or opportunities.
 
-[Link to Contact Me Component](./portfolio-app/src/components/Contact_Me_Frame.js)
+[ Contact Me ](./portfolio-app/src/components/Contact_Me_Frame.js)
 
 ## Feedback
 I value feedback and suggestions. The Feedback section includes a form where visitors can leave their comments and suggestions to help me improve my portfolio.
 
-[Link to Feedback Component](./portfolio-app/src/components/Feedback.js)
+[ Feedback ](./portfolio-app/src/components/Feedback.js)
 
 ## References
 Here are some referral links to learn more about me and my work:

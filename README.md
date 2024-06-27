@@ -33,7 +33,7 @@ In the Experience section, I detail my professional journey, including the roles
 [ Experience ](./portfolio-app/src/components/Experience.js)
 
 ### Education
-The Education section outlines my academic background, including the institutions I've attended, the degrees I've earned, and any relevant coursework or honors.
+The Education section outlines my academic background, including the institutions I've attended, the degrees I've earned, and any relevant coursework or honors and my scores.
 
 [ Education ](./portfolio-app/src/components/Education.js)
 

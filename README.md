@@ -76,6 +76,17 @@ Here are some referral links to learn more about me and my work:
 - [LinkedIn](https://www.linkedin.com/in/mali-pashupathi/)
 - [GitHub](https://github.com/Pashu3)
 
+## Deployement
+The project is deployed using free versions of Netlify for the frontend and Render for the backend. So there might be latency in requests
+
+You can visit the live version of the frontend using the link below:
+ 
+ [ Portfolio ](https://pashu-portfolio.netlify.app/)
+
+You can view the live demo here:
+ 
+ [ Click here ](https://www.youtube.com/watch?v=k0nDp8dYTSo)
+
 
 ---
 

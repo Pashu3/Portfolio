@@ -1,0 +1,25 @@
+:root {
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+  --default-color: white;
+}
+
+.App {
+  text-align: center;
+  overflow-x: hidden;
+  background-color: rgb(221, 208, 200);
+  color: rgb(50,50,50);
+  
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+

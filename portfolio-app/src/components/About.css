@@ -1,0 +1,72 @@
+.about {
+  padding: 1px;
+  background: rgb(221, 208, 200);
+}
+
+.about-navbar {
+  background-color: rgb(50, 50, 50) ; 
+  border-bottom: 1px solid #dee2e6; 
+  padding: 10px 10px;
+  width: 100%; 
+}
+
+.about-heading {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 305px;
+  color: white;
+}
+
+.about-heading .icon {
+  margin-right: 5px;
+}
+.about-me{
+  margin-top: 20px;
+  margin-left: 400px;
+  margin-right: 125px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px solid rgb(200, 200, 200);
+  text-align: start;
+  align-items: baseline;
+}
+.about-me h3{
+  color: rgb(50, 50, 50);
+}
+.about-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background-color: whitesmoke;
+  width: 600px; 
+  height: 50px; 
+  margin: 0 auto; 
+  color: rgb(50, 50, 50);
+}
+
+.about-buttons button {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  background: none;
+}
+.about-buttons :hover{
+  color: rgb(159, 34, 47);
+}
+
+.about-buttons .active {
+  text-decoration: underline;
+}
+
+.button-space {
+  width: 20px; 
+}
+
+.about-content {
+  margin-top: 20px;
+}

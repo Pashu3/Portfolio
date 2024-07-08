@@ -1,0 +1,80 @@
+.feedback-frame-overlay {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: translateX(-50%);
+  width: 50%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: height 0.3s ease; 
+}
+.frame-overlay.minimized {
+  height: 50px; 
+}
+
+.frame-overlay.minimized .frame-content {
+  display: none; 
+}
+
+.feedback-frame-overlay.maximized {
+  width: 90%;
+  height: 90%;
+  top: 5%;
+}
+
+.feedback-frame-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f1f1;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.feedback-frame-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.feedback-frame-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.feedback-frame-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.feedback-frame-content {
+  padding: 20px;
+}
+
+.feedback-sub-heading {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.feedback-sub-heading input,
+.feedback-sub-heading textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.feedback-submit {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}

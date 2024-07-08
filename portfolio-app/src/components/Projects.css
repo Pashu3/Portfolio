@@ -1,0 +1,86 @@
+.projects{
+  margin-left: 305px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgb(221, 208, 200);
+}
+.projects .horizontal-navbar {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgb(50,50,50);
+}
+
+.projects .navbar-item {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.projects .icon {
+  font-size: 24px; 
+  margin-right: 5px; 
+  font-weight: bold;
+}
+
+.projects .sub-content {
+  margin-top: 10px; 
+  font-weight: normal;
+ 
+}
+
+.projects .sub-heading {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px; 
+}
+
+.projects .project-date {
+  margin-left: auto;
+  margin-right: 25px; 
+}
+
+.projects .content {
+  margin-left: 20px; 
+  font-size: 15px;
+  margin-right:130px;
+  text-align: start;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  border: 2px solid rgb(236, 220, 220); 
+  padding: 5px;
+  margin-left: 80px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+.projects .content ul{
+  list-style: disc;
+  padding-left: 20px;
+}
+.projects .content li{
+  margin-bottom: 10px;
+}
+.projects .box {
+  display: flex;
+  gap: 20px; 
+  background-color: rgb(221, 208, 200);
+}
+
+.projects .view-link {
+  padding: 4px 8px;
+  border: 1px solid rgb(236, 220, 220);
+  background-color:white; 
+  border-radius: 5px; 
+  text-decoration: solid;
+  color: black;
+  font-weight: 700;
+  font-size: 14px;
+  margin-left: 450px;
+  cursor: pointer;
+}
+.projects .view-link:hover {
+  color:rgb(159, 34, 47); 
+}

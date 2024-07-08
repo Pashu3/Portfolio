@@ -1,0 +1,90 @@
+.experience {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 400px; 
+  border: 2px solid rgb(200, 200, 200); 
+  padding: 10px;
+  margin-right: 125px; 
+}
+
+.experience .horizontal-navbar {
+  display: flex;
+  background-color: #040b14;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.experience .horizontal-navbar .navbar-item {
+  display: flex;
+  align-items: center;
+}
+
+.experience .icon {
+  font-size: 24px;
+}
+
+.experience .sub-heading {
+  font-size: 16px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.experience .internship-sub-heading {
+  margin-left: 0px; 
+}
+
+.experience .sub-sub-heading {
+  margin-left: 15px;
+  margin-right: 50px;
+  align-content: center;
+  text-align: start;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  position: relative;
+  font-weight: bold;
+}
+
+.experience .Internship-date {
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  margin-right: -38px; 
+  color: rgb(50,50,50);
+}
+
+.experience .sub-sub-heading .icon {
+  margin-right: 2px;
+  margin-bottom: -5px;
+}
+
+.experience .internship-sub-content {
+  border: 2px solid rgb(236, 220, 220);
+  text-align: start;
+  margin-left: 60px; 
+  font-size: 16px;
+  padding-left: 10px;
+  margin-right: 175px; 
+  font-weight: normal;
+  position: relative;
+}
+
+.experience .internship-sub-content a {
+  position: absolute; 
+  top: 20px; 
+  right: 50px; 
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Adjust the margin between toggles */
+.experience .sub-heading:not(:first-child) {
+  margin-top: 20px; 
+  margin-left: 20px; 
+}

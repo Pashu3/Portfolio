@@ -19,11 +19,11 @@ app.use(cors({
 
 app.use(morgan('dev'));
 
-
-const mongoose = require('mongoose');
-
-mongoose.connect('your-mongodb-uri');
-
+// MongoDB Atlas Connection
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const db = mongoose.connection;
 

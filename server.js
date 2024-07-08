@@ -14,7 +14,7 @@ const port = process.env.PORT || 3001;
 // Middleware
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'https://pashu-portfolio.netlify.app/',
+  origin: 'https://pashu-portfolio.netlify.app',
 }));
 
 app.use(morgan('dev'));

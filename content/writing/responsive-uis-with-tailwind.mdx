@@ -1,0 +1,38 @@
+---
+title: Creating responsive UIs with Tailwind
+date: Apr 2025
+iso: 2025-04-28
+readTime: 6 min
+category: Design
+blurb: Why utility-first stopped feeling weird, and how I think about breakpoints, container queries, and design tokens in a real project.
+---
+
+I held out on Tailwind for a long time. The class lists looked like noise. The first project I tried it on changed my mind in about a week — not because the classes got prettier but because the editing loop got tighter.
+
+## Breakpoints aren't device-shaped
+
+The default Tailwind breakpoints are named after devices, but devices stopped being a useful unit a decade ago. The right way to read `md:` is "medium-sized container," not "tablet." Once you stop trying to map widths to imagined devices, layout decisions get cleaner.
+
+## Container queries are the upgrade
+
+Most components don't care about the viewport — they care about the space they're given. Tailwind's container queries (`@container` + `@md:`) let you express that directly.
+
+```html
+<aside class="@container">
+  <article class="grid grid-cols-1 @md:grid-cols-2 gap-4">
+    ...
+  </article>
+</aside>
+```
+
+Same component, different layouts depending on the slot it lands in. That's something media queries simply couldn't do without page-level coupling.
+
+## Design tokens via the config
+
+Tailwind's config is where consistency lives. Define your colors, spacings, and font sizes once. Let utilities use them. The discipline is small but the payoff compounds — your design stays internally coherent without anyone having to police it.
+
+## Components when the same string repeats four times
+
+The right time to extract a component isn't "when the class list gets long." It's "when the same long class list appears in four places." Until then, the duplication is honest. After then, you're paying interest.
+
+> Utility-first feels weird until you realise you've stopped naming things that didn't deserve names.

@@ -1,0 +1,30 @@
+---
+title: From frontend to full-stack — my journey
+date: Feb 2025
+iso: 2025-02-18
+readTime: 7 min
+category: Career
+blurb: The mental shift, the libraries that helped, the projects that taught me the most. Mostly the part where I had to learn to like SQL.
+---
+
+I started on the frontend because that's where you can see what you're building. CSS makes a button. The button does something. Magic. The backend, by contrast, was a place where things either worked or returned 500, and I had no intuition for why.
+
+## The mental shift
+
+What changed wasn't a tutorial. It was building something where I controlled both ends and watched the seam between them. Every API response I designed badly came back as a frontend bug. Every database column I named lazily came back as a confused product manager. The feedback loop is what made the backend feel like a real place rather than a black box.
+
+## The libraries that mattered
+
+Django, because it has opinions. Postgres, because it doesn't lie about what it can't do. Drizzle and Prisma, because schema-first thinking saves you from yourself. None of these were the "best" tool by any abstract measure — they were the tools that taught me what good design feels like.
+
+## Projects that taught me the most
+
+A budget tracker that I rewrote three times because I couldn't get the schema right. A SaaS where I learned what "idempotent" actually means after Stripe webhooks fired four times for the same payment. A kiosk app where I got to feel what it's like to ship something a real person uses on a screen they can't restart.
+
+## Learning to like SQL
+
+I resisted SQL longer than I should have. ORMs let you pretend the database doesn't exist, until you ship something slow and have to look at the query plan. The day I read my first `EXPLAIN ANALYZE` was the day I stopped writing queries by guessing.
+
+> Full-stack, to me, just means you understand what's on the other side of the wire well enough to make better decisions on this side.
+
+If you're a frontend dev wondering whether the leap is worth it: it is. Not because backend pays more or feels more "serious." Because once you can see the whole stack, you stop arguing with yourself about which side a problem belongs on.

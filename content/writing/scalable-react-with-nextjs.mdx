@@ -1,0 +1,47 @@
+---
+title: Building scalable React apps with Next.js
+date: May 2025
+iso: 2025-05-10
+readTime: 8 min
+category: Development
+blurb: Server-side rendering, API routes, image optimization. The pieces of Next that actually move the needle once your app gets real traffic.
+---
+
+Most "scalable React" advice is generic enough to apply to any framework. This is the version I keep coming back to after watching three apps grow past the point where dev mode runs in under five seconds.
+
+## SSR is a question, not a default
+
+Server rendering exists because some pages need to be fast on first paint and discoverable to crawlers. It does not exist because client rendering is bad. The right question is per-route: who's the audience, and what do they need before JS hydrates?
+
+Marketing pages, blog posts, anything a search engine will index — server. App shells, dashboards, anything behind a login — client is usually fine. Mixing both inside one Next app is the whole point.
+
+## API routes as boundaries, not landfills
+
+The temptation is to drop every backend call into `/api/*` because it works. The cost is real. `/api` routes share the deployment, share the cold-start, and share blast radius when something is wrong. They're best as a thin boundary — auth, rate limits, light orchestration — with the actual business logic living somewhere it can be tested independently.
+
+```ts
+// app/api/users/route.ts
+import { auth } from "@/lib/auth";
+import { listUsers } from "@/lib/users";
+
+export async function GET(req: Request) {
+  const session = await auth(req);
+  if (!session) return new Response("unauthorized", { status: 401 });
+  const users = await listUsers(session.tenantId);
+  return Response.json({ users });
+}
+```
+
+The route does auth and shape. `listUsers` does the work and is unit-testable without spinning up Next. That separation pays back the first time you need a CLI or a worker calling the same logic.
+
+## Images: real, but only when traffic earns it
+
+`next/image` is great. It is also a build-time and runtime cost. For a site with a hundred visitors a day, raw `<img>` tags with a sensible width attribute are fine. The wins from the optimizer compound at scale — I'd think twice before introducing it for a project that hasn't proven it'll grow.
+
+## Bundle splitting: trust, but verify
+
+App Router does a reasonable job of splitting client bundles per route. The way to confirm what's actually happening is open the build output and read it. The number that matters isn't "total bundle size" — it's "first interaction bundle on the route a real user lands on."
+
+> Most "scaling" problems aren't React problems. They're database queries, image weights, or third-party scripts. Solve those first.
+
+If you've been worried about scaling React, you're probably worrying about the wrong layer. Profile a real session. The bottleneck is rarely where you'd guess.

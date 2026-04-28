@@ -1,0 +1,37 @@
+---
+title: Authentication strategies for modern web apps
+date: Mar 2025
+iso: 2025-03-22
+readTime: 12 min
+category: Tutorial
+blurb: JWT, OAuth, session cookies, magic links. A practical comparison of what to reach for, and where each one quietly breaks at scale.
+---
+
+Auth is the thing every project does, half of them do badly, and most teams never revisit. Picking the right primitive at the start saves a rewrite later.
+
+## Session cookies — the boring choice
+
+A session ID stored in an HTTP-only cookie, mapped to a row in a sessions table. Old, simple, hard to get wrong. Logout is a real DELETE. Revocation is a real DELETE. Most apps should start here.
+
+The complaint people raise is "doesn't scale" — which mostly translates to "I'd need a session store." You probably already have Redis or Postgres. The session store is one of those.
+
+## JWTs — popular, often wrong
+
+JWTs are stateless tokens. Logout becomes an exercise in "wait for it to expire" or "maintain a denylist that defeats the point of being stateless." For internal service-to-service calls, fine. For user sessions, the operational cost almost always outweighs the supposed scaling benefit.
+
+## OAuth — necessary, hard to do well
+
+If you're letting users sign in with Google, GitHub, or Apple, you're doing OAuth. Use a battle-tested library. Don't roll your own. The flows are simple to demo and full of edge cases — refresh tokens, scope changes, account linking, the user revoking your app outside your UI. The library handles 90% of these correctly. You'll handle 50% if you write it yourself.
+
+## Magic links — UX win, security gotchas
+
+Send a one-time link to email, click, signed in. Lovely UX. Two failure modes to plan for: emails sometimes take minutes to arrive, and tokens that don't expire are tokens an attacker can use. Short TTLs and single-use are non-negotiable.
+
+## Picking by use case
+
+- B2C consumer app, password optional → OAuth + magic links.
+- B2B SaaS with admin controls → OAuth + session cookies, scoped per-tenant.
+- Internal tools → SSO, session cookies, no exceptions.
+- Service-to-service → signed JWTs with short TTLs, separate from user auth.
+
+> Auth is the kind of thing where "simple and boring" beats "clever and stateless" nine times out of ten.

@@ -1,0 +1,59 @@
+---
+title: TypeScript best practices for frontend developers
+date: Apr 2025
+iso: 2025-04-15
+readTime: 10 min
+category: Development
+blurb: Patterns I keep coming back to — and the ones I had to unlearn. Generics, discriminated unions, and the type-narrowing tricks that pay rent.
+---
+
+I've been writing TypeScript long enough to have opinions about it. None of these are revolutionary. They're the patterns I use every week and the ones I had to actively unlearn.
+
+## Discriminated unions over boolean flags
+
+Most state in a UI is one of a few possible shapes. The lazy version is a bag of optionals with comments explaining which combinations are legal. The right version is a discriminated union.
+
+```ts
+// avoid
+type Result = {
+  loading: boolean;
+  data?: User;
+  error?: string;
+};
+
+// prefer
+type Result =
+  | { status: "idle" }
+  | { status: "loading" }
+  | { status: "ok"; data: User }
+  | { status: "error"; error: string };
+```
+
+Now the compiler tells you when you forgot to handle a state, and "data and error are both set" is impossible to express. Half the bugs I've seen in async components are this same shape.
+
+## Narrow with `in`, not just `typeof`
+
+The `in` operator is the simplest narrowing tool TS gives you. It also works with discriminated unions when there's no convenient string field to switch on.
+
+```ts
+function describe(x: { kind: "user"; name: string } | { error: string }) {
+  if ("error" in x) return `error: ${x.error}`;
+  return `user: ${x.name}`;
+}
+```
+
+## `as const` more, `as Type` less
+
+`as const` is a promise to TypeScript. `as Type` is a lie to it. If you find yourself writing `as Foo`, the type system is telling you it doesn't believe you — and most of the time, it's right.
+
+## Generics with constraints, not generics for show
+
+A generic without a constraint is usually a generic that doesn't need to be one. The right pattern is to add a `T extends X` constraint that says what the function actually relies on. Otherwise you're just smearing `any` through the type system in a fancier hat.
+
+## Accept `unknown` at boundaries
+
+Network responses, parsed JSON, anything from outside your code — type as `unknown` and validate. Schema libraries (zod, valibot) earn their keep here. Once validated, the rest of your code gets a real type and the boundary contains the mess.
+
+> TypeScript is most useful when it's asking you questions, not when it's answering them.
+
+If your types are smooth and your code is buggy, your types aren't doing their job. Push the type system to make impossible states unrepresentable, and the bugs follow.

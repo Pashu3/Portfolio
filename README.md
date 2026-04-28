@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pashupathi Mali — Portfolio
 
-## Getting Started
+Personal site of [Pashupathi Mali](https://www.linkedin.com/in/mali-pashupathi/), a full-stack engineer at [syndie.io](https://syndie.io). Case studies, writing, and the systems-design work I care about.
 
-First, run the development server:
+Live: _add your domain here_
+
+## Stack
+
+- **Framework:** Next.js 16 (App Router) + React 19
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Content:** MDX via `next-mdx-remote` + `gray-matter` frontmatter
+- **Fonts:** Geist Sans, Geist Mono, Instrument Serif (`next/font`)
+- **Lint:** ESLint 9 (flat config) with `eslint-config-next`
+
+> Note: this repo runs on Next.js 16, which has breaking changes vs. older versions. Read the relevant guide in `node_modules/next/dist/docs/` before changing routing, caching, or data-fetching primitives.
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command         | What it does                  |
+| --------------- | ----------------------------- |
+| `npm run dev`   | Start the dev server          |
+| `npm run build` | Production build              |
+| `npm run start` | Run the production server     |
+| `npm run lint`  | Lint the project with ESLint  |
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  app/
+    layout.tsx              # Root layout, fonts, Spotlight effect
+    page.tsx                # Home (Hero / Marquee / Work / Experience / Writing / Contact)
+    work/[slug]/page.tsx    # Case study pages
+    writing/[slug]/page.tsx # MDX-rendered posts
+    globals.css             # Tailwind + design tokens
+  components/               # Hero, Work, Writing, Experience, Marquee, etc.
+  lib/
+    projects.ts             # Case-study data (PROJECTS)
+    posts.ts                # MDX loader for /content/writing
+content/
+  writing/*.mdx             # Long-form posts
+public/                     # Static assets
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Adding content
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### A new case study
 
-## Deploy on Vercel
+Append a `Project` entry to [src/lib/projects.ts](src/lib/projects.ts). The `slug` becomes `/work/<slug>` automatically.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### A new writing post
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Drop an `.mdx` file into [content/writing/](content/writing/) with frontmatter (title, date, summary). It becomes available at `/writing/<filename>`.
+
+## Deployment
+
+This site is built to deploy on [Vercel](https://vercel.com/new). Push to `main` and connect the repo — no extra config needed.
+
+## License
+
+All rights reserved. Code is published for reference; copy is mine. Please don't reuse the case-study writing or design wholesale for your own portfolio.
